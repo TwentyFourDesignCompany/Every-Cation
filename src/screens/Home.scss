@@ -104,11 +104,23 @@ body {
 .main__container__bg {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 .main__container {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   position: relative;
+}
+.main__container__shop {
+  width: 100%;
+  height: 65vh;
+  position: relative;
+}
+.main__container__shop__bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-top: -3em;
 }
 .silder__container {
   position: absolute;
@@ -813,17 +825,18 @@ body {
 }
 .main__container__shop__content__card {
   padding: 2em;
-  width: 22%;
+  width: 30%;
   margin-right: 1em;
   background: #f1f1f1;
   border-radius: 30px;
-  margin-top: 6em;
+  // margin-top: 6em;
   display: flex;
   flex-direction: column;
   text-decoration: none;
   justify-content: center;
   align-items: center;
   position: relative;
+  margin-bottom: 4em;
 }
 .main__container__shop__content__card:hover {
   transform: scale(1.04);
@@ -1270,6 +1283,786 @@ input:valid ~ label {
   font-size: 14px;
   text-align: center;
 }
+.search__job__container {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+}
+.search__job__container__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.search__job__container__overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search__job__container__content {
+  width: 100%;
+  max-width: 1440px;
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search__job__container__content__search__wrapper {
+  width: 80%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0px 10px 30px rgb(0, 0, 0, 0.1);
+  position: relative;
+  padding: 0.3em;
+}
+.search__job__container__content__search__input {
+  font-size: 16px;
+  color: #000000;
+  background: transparent;
+  border: 1px solid #fff;
+  outline: none;
+  margin-right: 1em;
+  width: 30%;
+  border-right-width: 1px;
+  border-right-color: #b8b8b8;
+  border-radius: 0 !important;
+  height: 45px;
+}
+.search__job__container__content__search__input:focus {
+  border-right-width: 1px !important;
+  border-right-color: #b8b8b8 !important;
+  border: none !important;
+}
+.search__job__container__content__search__select {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  width: 25%;
+}
+.search__job__container__content__search__select svg {
+  width: 22px;
+  height: 22px;
+  margin-left: 0.7em;
+}
+.search__job__container__content__search__select__entry__wrapper {
+  position: absolute;
+  top: 32px;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  padding: 1em;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 10px 30px rgb(0, 0, 0, 0.15);
+  z-index: 999;
+}
+.search__job__container__content__search__select__entry {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 0.5em 0em;
+  font-size: 15px;
+  color: #000000;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.search__job__container__content__search__select__entry:hover {
+  background: rgb(0, 0, 0, 0.08);
+  transition: 300ms ease-in-out;
+}
+.search__job__container__content__btn {
+  background: #e7b911;
+  border: none;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 80px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.search__job__container__content__btn svg {
+  width: 24px;
+  height: 24px;
+}
+.search__job__container__searches__content {
+  width: 100%;
+  max-width: 1440px;
+  height: fit-content;
+  padding: 4em 2em;
+  display: flex;
+  margin: 0px auto;
+  justify-content: center;
+}
+.search__result__container__vacancies-filter-panel-input-range {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 1em;
+  background: transparent !important;
+}
+.search__result__container__vacancies-filter-panel-input {
+  padding: 1em;
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+  background: #fff;
+  color: #000000;
+  font-size: 15px;
+  outline: none;
+}
+.search__result__container__vacancies-filter-panel-input-range-input {
+  -webkit-appearance: none;
+  flex: 1;
+  height: 5px;
+  border-radius: 5px;
+  background: #fff;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  margin-right: 1em;
+}
+.search__result__container__vacancies-filter-panel-input-range-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffc903;
+  cursor: pointer;
+}
+.search__result__container__vacancies-filter-panel-input-range-input::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+}
+.search__result__container__vacancies-filter-panel-input-range-buble {
+  color: #fff;
+}
+.search__result__container__vacancies-filter-panel {
+  width: 25%;
+  padding: 2em;
+  margin-right: 2em;
+  background-color: #b8b8b8;
+  border-radius: 10px;
+  height: fit-content;
+}
+.search__result__container__vacancies-filter-panel-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+}
+.search__result__container__vacancies-filter-panel-heading {
+  font-size: 22px;
+  font-weight: 600;
+  color: #242424;
+}
+.search__result__container__vacancies-filter-panel-heading-row-btn {
+  background-color: #ffc903;
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.6em 1em;
+  font-size: 14px;
+  transition: 300ms ease-in-out;
+  cursor: pointer;
+}
+.search__result__container__vacancies-filter-panel-heading {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}
+.search__result__container__vacancies-filter-panel-sub-heading {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+}
+.range__select {
+  width: 100px;
+  margin-left: 1em;
+}
+.range__select .select__control {
+  border: none !important;
+  outline: none !important;
+}
+.search__result__container__vacancies-filter-panel-info {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+}
+.range__select .select__control--is-focused {
+  border: none !important;
+  outline: none !important;
+}
+.search__result__container__vacancies-filter-panel-heading-row-btn:hover {
+  background-color: darken(#ffc903, 10%);
+  transition: 300ms ease-in-out;
+}
+.search__result__container__vacancies-filter-panel-catagory-checkbox {
+  position: absolute; // take it out of document flow
+  opacity: 0; // hide it
+  background: transparent !important;
+  & + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0 !important;
+    color: #fff !important;
+    margin-top: 1em;
+    font-size: 12px;
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    background: transparent !important;
+  }
+
+  // Box.
+  & + label:after {
+    content: "";
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+    background: #e1e1e1;
+    border-radius: 5px;
+  }
+
+  // Box hover
+  &:hover + label:after {
+    background: #ffc903;
+  }
+
+  // Box focus
+  &:focus + label:after {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+  }
+
+  // Box checked
+  &:checked + label:after {
+    background: #ffc903;
+  }
+
+  // Disabled state label.
+  &:disabled + label {
+    color: #b8b8b8;
+    cursor: auto;
+  }
+
+  // Disabled box.
+  &:disabled + label:after {
+    box-shadow: none;
+    background: #ddd;
+  }
+
+  // Checkmark. Could be replaced with an image
+  &:checked + label:before {
+    content: "";
+    position: absolute;
+    right: 13px;
+    top: 9px;
+    background: white;
+    width: 2px;
+    height: 2px;
+    box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white,
+      4px -6px 0 white, 4px -8px 0 white;
+    transform: rotate(45deg);
+  }
+}
+.search__job__container__searches__content__right {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+.search__job__container__searches__content__right__bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+}
+.search__job__container__searches__content__right__top {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.search__job__container__searches__content__right__btn {
+  padding: 1em 2em;
+  background: #ececec;
+  color: #000000;
+  border: none;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.search__job__container__searches__content__right__btn:hover {
+  background: darken(#ececec, 20%);
+  transition: 300ms ease-in-out;
+}
+.search__result__container__select__box {
+  width: 100%;
+  padding: 1em;
+  background: rgb(252, 252, 252, 0.2);
+  border-radius: 8px;
+  margin: 2em 0em;
+}
+.search__result__container__select__box___btn {
+  background: transparent;
+  width: 100%;
+  padding: 1em;
+  border: none;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+  margin-top: 0.5em;
+}
+.search__result__container__select__box___btn:hover {
+  box-shadow: 0px 10px 30px rgb(0, 0, 0, 0.1);
+  background: #fff;
+  color: #ffc903;
+  transition: 300ms ease-in-out;
+}
+.search__result__container__select__box___btn__select {
+  box-shadow: 0px 10px 30px rgb(0, 0, 0, 0.1);
+  background: #fff;
+  color: #ffc903;
+  transition: 300ms ease-in-out;
+}
+.job__card {
+  width: 30%;
+  background: #f9f9f9;
+  padding: 2em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 14px;
+  position: relative;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+  text-decoration: none;
+}
+.job__card:hover {
+  background: #ffc903;
+  transition: 300ms ease-in-out;
+}
+.job__card:hover .job__card__heading,
+.job__card:hover .job__card__content__para {
+  color: #fff;
+}
+.job__card:hover .job__card__content__para svg {
+  fill: #fff !important;
+}
+.job__card__badge {
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  background: #fff;
+  padding: 0.5em 0.8em;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0px 10px 30px rgb(0, 0, 0, 0.1);
+  font-size: 12px;
+  font-weight: 500;
+}
+.job__card__content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5em 0em;
+}
+.job__card__heading {
+  font-size: 18px;
+  color: #04133b;
+  font-weight: 600;
+}
+.job__card__content__para {
+  font-size: 14px;
+  color: #707070;
+  display: flex;
+  align-items: center;
+}
+.job__card__content__para svg {
+  width: 18px;
+  height: 18px;
+  margin-right: 0.6em;
+}
+.job__card__btn {
+  background: #04133b;
+  padding: 0.8em 1.5em;
+  border: none;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1.5em;
+}
+.search__job__section {
+  width: 100%;
+  height: fit-content;
+  min-height: 40vh;
+  display: flex;
+  // background: url("./assets/searchJobBg.jpg") no-repeat;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+}
+.search__job__section__content {
+  width: 100%;
+  max-width: 1440px;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.search__job__section__content__heading {
+  font-size: 26px;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+.search__job__section__content__para {
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+  width: 90%;
+}
+.product__details {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 0em 2em;
+  width: 100%;
+  max-width: 1440px;
+}
+.product__details__top__row {
+  display: flex;
+  justify-content: space-between;
+}
+.product__details__images {
+  width: 50%;
+  height: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+.product__details__image__pic {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.product__details__images__suggestions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 2em;
+}
+.product__details__images__suggestion__btn {
+  width: 100px;
+  height: 90px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: transparent;
+}
+.product__details__images__suggestion {
+  width: 100%;
+  height: 100%;
+}
+.product__details__image {
+  flex: 1;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product__details__content {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+.product__details__content__heading__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+}
+.product__details__content__heading__row__heading {
+  width: 70%;
+  flex-wrap: wrap;
+}
+.product__details__content__heading__row__heading span {
+  font-size: 30px;
+  color: #000000;
+  font-weight: bold;
+}
+.product__details__content__heading__row__line {
+  width: 100%;
+  height: 5px;
+  background-color: #e8985d;
+  border-radius: 3px;
+  margin-top: 0.3em;
+}
+.product__details__content__heading__row__btn {
+  display: flex;
+}
+.product__details__content__heading__row__icon {
+  color: #000000;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+.product__details__content__heading__row__icon:hover {
+  color: #e8985d;
+  background-color: #ffffff;
+}
+.product__details__content__heading__row__icon svg {
+  width: 20px;
+  height: 20px;
+}
+.product__details__content__info {
+  font-size: 16px;
+  color: #000000;
+}
+.product__details__content__variant {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+}
+.product__details__content__variant__heading {
+  font-size: 24px;
+  color: #000000;
+  font-weight: bold;
+}
+.input-radio-color {
+  display: inline-block;
+  margin: 0.5em 0em;
+  input[type="radio"] {
+    display: none;
+  }
+  input[type="radio"] + label {
+    width: 35px;
+    height: 35px;
+    border-radius: 35px;
+    border: 2px solid #ffffff;
+    margin-right: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  input[type="radio"] + label:hover {
+    border-color: #e8985d;
+  }
+  input[type="radio"]:checked + label {
+    border-color: #e8985d;
+  }
+  .input-radio-color-value {
+    width: 22px;
+    height: 22px;
+    border-radius: 35px;
+  }
+}
+
+.input-radio-size {
+  display: inline-block;
+
+  margin: 0.5em 0em;
+  input[type="radio"] {
+    display: none;
+  }
+  input[type="radio"] + label {
+    padding: 0.3em 1em;
+    border-radius: 8px;
+    border: 2px solid #ffffff;
+    margin-right: 0.5em;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  input[type="radio"] + label:hover {
+    border-color: #e8985d;
+  }
+  input[type="radio"]:checked + label {
+    border-color: #e8985d;
+  }
+}
+
+.product__catagories__content__row {
+  padding: 0em 1em;
+}
+
+.product__catagories__content__row__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  flex-wrap: wrap;
+}
+.review__form {
+  margin: 2em 10em;
+  display: flex;
+  flex-direction: column;
+}
+.review__form__heading {
+  font-size: 25px;
+  color: #000000;
+  font-weight: bold;
+}
+.review__form__textarea {
+  width: 100%;
+  margin: 0.5em 0em;
+  margin-bottom: 1em;
+  border-radius: 10px;
+  color: #000000;
+  font-size: 16px;
+  border: 1px solid #ffffff;
+  background-color: #f3f3f3;
+  outline: none;
+  padding: 2em;
+  resize: none;
+}
+
+.review__form__textarea:hover {
+  border-color: #000000;
+}
+.review__form__textarea:focus {
+  border-color: #e8985d;
+}
+.review__form__btn {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.customer__link__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 5em 0em;
+}
+.customer__link {
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+  width: 30%;
+  text-decoration: none !important;
+}
+.customer__link__svg {
+  width: 30px;
+  height: 30px;
+}
+.customer__link__label {
+  font-size: 16px;
+  color: #000000;
+  margin-top: 1em;
+}
+.customer__link:hover {
+  transition: 200ms ease-in-out;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+.main__product__content__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1em;
+}
+.main__product__content__quantity {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 0.5em 0.8em;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.main__product__content__quantity button {
+  background-color: transparent;
+  border: none;
+}
+.main__product__content__quantity button svg {
+  color: #000000;
+}
+.main__product__content__quantity button svg:hover {
+  color: black;
+}
+.main__product__content__quantity__value {
+  margin: 0em 1em;
+}
+.main__product__content__price {
+  font-size: 40px;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+.main__product__content__price div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.main__product__content__price span {
+  font-size: 24px;
+  margin-right: 1em;
+}
+.hero__section__reverse {
+  width: 100%;
+  height: fit-content;
+  min-height: 70vh;
+}
+.hero__section__overlay__reverse {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.product__catagories__content__row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 2em 0em;
+}
+
 @media (max-width: 1200px) {
   .silder__container {
     display: none;

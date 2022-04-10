@@ -466,7 +466,6 @@ export default function Home() {
           <ShopCard path="/shop" />
           <ShopCard path="/shop" />
           <ShopCard path="/shop" />
-          <ShopCard path="/shop" />
         </div>
       </div>
       <div id="contact" className="main__container__contact">

@@ -149,15 +149,15 @@ export default class Header extends Component {
               >
                 Travel Journal
               </a>
-              <a
-                href="#shop"
+              <Link
+                to="/shop"
                 className="nav__header__link"
                 onClick={() => {
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
               >
                 Travel Shop
-              </a>
+              </Link>
               <a
                 href="#covid"
                 className="nav__header__link"
